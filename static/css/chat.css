@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+}
+
+body{
+    background-color: rgb(17,0,18);
+}
+
+
+#contenedor{
+    background-color: rgb(17,0,18);
+    width: 99vw;
+    height: 90dvh;
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    margin-top: 20px;
+}
+
+#mensajes{
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: scroll;
+    max-height: 70dvh;
+
+}
+
+#inputs{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    height: 100px;
+    
+}
+
+#txt_area{
+    width: 70%;
+    resize: none;
+    border-style: hidden;
+    border-radius: 14px;
+    font-size: 20px;
+}
+
+#btn_enviar{
+    width: 20%;
+    min-width: 100px;
+    border-style: hidden;
+    border-radius: 2rem;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.mensaje_contenedor{
+    height: auto;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(196, 196, 164);
+    margin-bottom: 20px;
+
+}
+
+.mensaje{
+    color: rgb(162, 162, 153);
+    background-color: rgba(255, 255, 255, 0.065);
+    padding-left: 10px;
+    min-height: 50px;
+    max-height: 200px;
+    overflow-x: scroll;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    height: auto;
+}
+
+:root {
+    --viewport-heigth: 90vh;
+
+}
+
+#contenedor{
+    height: var(--viewport-heigth);
+}

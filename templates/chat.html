@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-escalable=no, viewport-fit=cover">
+    <title>Chat</title>
+    <link rel="stylesheet" href="/static/css/chat.css">
+</head>
+<body>
+
+    <div id="contenedor">
+
+        <section id="mensajes">
+           
+        </section>
+
+
+        <div id="inputs">
+            <textarea maxlength="300" name="mensaje" id="txt_area" placeholder="Mensaje..."></textarea>
+            <button id="btn_enviar">Enviar</button>
+        </div>
+
+
+    </div>
+</body>
+<script src="/static/js/socket.io.min.js"></script>
+<script src="/static/js/chat.js"></script>
+</html>

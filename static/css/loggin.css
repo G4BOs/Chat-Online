@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(17,0,18);
+    color:beige;
+    text-align: center;
+    
+}
+
+#inp_nombre{
+    height: 50px;
+    width: 50vw;
+    border-style: hidden;
+    font-size: 30px;
+    margin-top: 200px;
+}
+
+#btn{
+    margin-top: 200px;
+    height: 50px;
+    border-style: hidden;
+    font-size: 25px;
+}
