@@ -1,12 +1,16 @@
 #======================================================================|
 from flask import Flask, redirect, request, render_template, session, url_for
 from flask_socketio import SocketIO, emit, rooms
+from dotenv import load_dotenv
+import os
 import secrets
+
+load_dotenv()
 
 #============================*****=====================================|
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'clave provicional'
-socketio = SocketIO(app, cors_allowed_origins='*')
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+socketio = SocketIO(app, cors_allowed_origins='*', async_mode='eventlet')
 #============================*****=====================================|
 """                  VARIABLES Y DICCIONARIOS                       """
 usuarios = {}
@@ -51,7 +55,6 @@ def handle_nuevo_mensaje(data):
 @socketio.on('connect')
 def handle_connect():
     if session.get('user_id') in usuarios:
-        print(usuarios)
         emit('mi_nombre',{'nombre': usuarios[session.get('user_id')]['nombre']})
     else:
         emit('redirect',{'url':'/'})
