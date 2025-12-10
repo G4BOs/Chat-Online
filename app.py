@@ -54,7 +54,6 @@ def handle_connect():
         print(usuarios)
         emit('mi_nombre',{'nombre': usuarios[session.get('user_id')]['nombre']})
     else:
-        print('AAAAAAAAAAAAAAAAAAAAAAAAA')
         emit('redirect',{'url':'/'})
 
 @socketio.on('recibir_mensajes')
