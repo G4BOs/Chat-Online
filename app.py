@@ -10,7 +10,7 @@ load_dotenv()
 #============================*****=====================================|
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
-socketio = SocketIO(app, cors_allowed_origins='*', async_mode='eventlet')
+socketio = SocketIO(app, cors_allowed_origins='*', async_mode='gevent')
 #============================*****=====================================|
 """                  VARIABLES Y DICCIONARIOS                       """
 usuarios = {}
